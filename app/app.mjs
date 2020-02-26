@@ -49,15 +49,14 @@ app.use(async (ctx,next)=> {
   }
 });
 
-app.use(mount('/metrop/',serve('../metrop/html',serveOpts)));
 app.use(mount('/images/',serve(resolveHome('~/www/images/'),serveOpts)));
 app.use(mount('/blog/',serve(resolveHome('~/www/blog/contents/'),serveOpts)));
 app.use(mount('/content/',serve(resolveHome('~/www/images/content'),serveOpts)));
 
 app.use(mount('/javascripts/',serve(resolveHome('~/www/node/webserver/public/javascripts/'),serveOpts)));
 app.use(mount('/stylesheets/',serve(resolveHome('~/www/node/webserver/public/stylesheets/'),serveOpts)));
-app.use(mount('/webhook/',webhook(fs.readFileSync(resolveHome('~/www/node/keys/webhook/secret'),'utf-8').trim()),webhookHandler()));
 app.use(mount('/',serve(resolveHome('~/www/html/contents/'),serveOpts)));
+
 //.use(router.routes());
 //  .use(router.allowedMethods());
 
