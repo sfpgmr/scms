@@ -30,7 +30,7 @@ async function buildcss(){
     cssVariables,
     simpleVars,
     postcssPresetEnv({stage:0, preserve: false}),
-    purgecss({content: ['./public/js/*.js', './public/html/*.html']}),
+    purgecss({content: ['./public/js/*.js', './public/html/*.html','./src/ejs/*.ejs','./src/riot/*.riot']}),
     cssnano
   ]).process(css,{
     from:src,to:dest
