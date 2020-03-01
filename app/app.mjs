@@ -15,8 +15,8 @@ import webhookHandler from '../routes/webhook.mjs';
 import fs from 'fs';
 import resolveHome from './resolveHome.mjs';
 import bodyParser from 'koa-bodyparser';
-import webhook from 'koa-webhook';
 import helmet from 'koa-helmet';
+import session from 'koa-session';
 
 const serveOpts = {extensions:['html','htm']};
 

@@ -6,27 +6,39 @@
     "start": "sudo node --experimental-modules ./bin/www.mjs"
   },
   "dependencies": {
+    "@riotjs/ssr": "^4.2.0",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
     "@types/send": "^0.14.5",
     "async": "^3.2.0",
-    "ejs": "~2.5.7",
+    "cssnano": "^4.1.10",
+    "ejs": "^2.5.9",
+    "fs-extra": "^8.1.0",
     "github-webhook-handler": "^0.7.1",
     "http-errors": "~1.6.2",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",
     "koa-cookie": "^1.0.0",
-    "koa-ejs": "^4.3.0",
     "koa-helmet": "^5.2.0",
     "koa-json": "^2.0.2",
     "koa-morgan": "^1.0.1",
     "koa-mount": "^4.0.0",
     "koa-router": "^7.4.0",
-    "koa-send": "git+https://github.com/sfpgmr/send.git",
-    "koa-static": "git+https://github.com/sfpgmr/static.git",
-    "koa-webhook": "0.0.1",
-    "koa-x-hub": "^1.0.0",
-    "socket.io": "^2.3.0"
+    "koa-session": "^5.13.1",
+    "perfectionist": "^2.4.0",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0",
+    "postcss-css-variables": "^0.14.0",
+    "postcss-import": "^9.1.0",
+    "postcss-mixins": "^5.4.1",
+    "postcss-nested": "^1.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-simple-vars": "^3.1.0",
+    "precss": "^4.0.0",
+    "riot": "^4.9.3",
+    "riot-cli": "^5.1.2",
+    "rollup": "^1.32.0",
+    "rollup-cli": "^1.0.9"
   },
-  "devDependencies": {
-    "rollup-plugin-node-resolve": "^3.4.0"
-  }
+  "devDependencies": {}
 }
