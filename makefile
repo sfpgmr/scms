@@ -13,6 +13,8 @@ JS = ./public/js/bundle.js
 BUNDLE_JS = rollup -i ./src/js/bundle.js -f es -o $@ -p @rollup/plugin-node-resolve 
 JS_SRC = ./src/js/*.js
 
+# htmlのビルド用パラメータ
+
 .PHONY:all
 all:$(CSS)
 

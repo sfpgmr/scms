@@ -7,9 +7,10 @@ import nested from 'postcss-nested';
 import simpleVars from 'postcss-simple-vars';
 import postcssPresetEnv from 'postcss-preset-env';
 import cssVariables from 'postcss-css-variables';
-import perfectionist from 'perfectionist';
+//import perfectionist from 'perfectionist';
 import cssnano from 'cssnano';
 import fs from 'fs-extra';
+import purgecss from '@fullhuman/postcss-purgecss';
 
 process.chdir(path.resolve(path.dirname(new URL(import.meta.url).pathname),'../'));
 
@@ -29,7 +30,7 @@ async function buildcss(){
     cssVariables,
     simpleVars,
     postcssPresetEnv({stage:0, preserve: false}),
-    perfectionist,
+    purgecss({content: ['./public/js/*.js', './public/html/*.html']}),
     cssnano
   ]).process(css,{
     from:src,to:dest
