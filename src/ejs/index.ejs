@@ -1,8 +1,14 @@
+<% data = {title:'login'}; console.log(process.cwd());-%>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <%-include('header.ejs',{data:data}) %>
 </head>
-<body>
-  
+<body class="has-navbar-fixed-top">
+    <div id="sf_app"></div>
+    <script src="/js/bundle.mjs"></script>
+ 
+  </body>
+  <%-include('footer.ejs') %>
 </body>
 </html>

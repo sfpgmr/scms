@@ -3,10 +3,6 @@
  */
  
 import app from '../app/app.mjs';
-import ScoreServer from './ScoreServer.mjs';
-//import {debug as debug_} from 'debug';
-//debug = debug_('webserver:server');
-//import http2 from 'spdy';
 import http2 from 'http2';
 import http from 'http';
 import fs from 'fs';
@@ -42,8 +38,6 @@ const options = {
 keys.passphrase && (options.passphrase = keys.passphrase);
 
 const server = http2.createSecureServer(options,app.callback());
-const scoreSever = new ScoreServer(server,process);
-
 
 /**
  * Listen on provided port, on all network interfaces.
