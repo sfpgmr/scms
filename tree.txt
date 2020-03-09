@@ -1,0 +1,50 @@
+.
+├── app
+│   ├── app-old.mjs
+│   ├── app.mjs
+│   └── resolveHome.mjs
+├── bin
+│   ├── ScoreServer.mjs
+│   └── www.mjs
+├── data
+├── keys
+│   └── webserver
+│       ├── keys.json
+│       ├── private.key
+│       ├── server.crt
+│       └── server.csr
+├── makefile
+├── package-lock.json
+├── package.json
+├── public
+│   ├── css
+│   │   └── style.css
+│   ├── html
+│   │   └── index.html
+│   └── js
+│       └── bundle.js
+├── rollup.config.js
+├── routes
+│   └── cms-console.mjs
+├── src
+│   ├── css
+│   │   ├── base.css
+│   │   └── include
+│   │       ├── bulma.css
+│   │       └── normalize.css
+│   ├── ejs
+│   │   ├── header.ejs
+│   │   └── index.ejs
+│   ├── html
+│   ├── js
+│   │   └── bundle.js
+│   └── riot
+│       ├── app.riot
+│       └── textbox.riot
+├── tools
+│   └── buildcss.mjs
+├── tree.txt
+├── views
+└── www.config.js
+
+20 directories, 29 files

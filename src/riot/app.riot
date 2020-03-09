@@ -1,0 +1,42 @@
+<app>
+  <router>
+    <sf_navbar></sf_navbar>
+    <div>
+      <sf_title></sf_title>
+
+      <route path="/">
+        <sf_home />
+      </route>
+      
+      <route path="/#login">
+        <sf_login />
+      </route>
+      <route path="/#about">
+        <sf_about />
+      </route>
+      <route path="/#signup">
+        <sf_signup />
+      </route>
+    </div>
+  </router>
+  <script>
+    // import sf_textbox from './textbox.riot';
+    // import sf_navbar from './navbar.riot';
+    // import sf_button from './button.riot';
+    // components: {
+    //     Router,Route,
+    //     sf_textbox,
+    //     sf_navbar,
+    //     sf_button
+    //   }
+    export default {
+    };
+  </script>
+  <style>
+    :host > div {
+      display:block;
+      padding-top: 40px;
+    }
+
+  </style>
+</app>

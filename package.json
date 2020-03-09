@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "sudo node --experimental-modules ./bin/www.mjs"
+    "start": "sudo node --experimental-modules ./bin/www.mjs",
+    "watch": "node --experimental-modules ./tools/watch.mjs"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.0",
@@ -31,6 +32,7 @@
     "koa-session": "^5.13.1",
     "koa-static": "^5.0.0",
     "mem": "^6.0.1",
+    "node-watch": "^0.6.3",
     "perfectionist": "^2.4.0",
     "postcss": "^7.0.27",
     "postcss-cli": "^7.1.0",
@@ -47,7 +49,8 @@
     "rollup": "^1.32.1",
     "rollup-cli": "^1.0.9",
     "rollup-plugin-riot": "^4.0.0",
-    "rollup-plugin-uglify": "^6.0.4"
+    "rollup-plugin-uglify": "^6.0.4",
+    "tailwindcss": "^1.2.0"
   },
   "devDependencies": {}
 }

@@ -8,7 +8,7 @@ RIOT_SRC = $(wildcard ./src/riot/*.riot)
 CSS := ./public/css/style.css
 CSS_SRC_BASE := ./src/css
 BUILD_CSS_SCRIPT := $(TOOLS)/buildcss.mjs
-CSS_SRC := $(CSS_SRC_BASE)/base.css $(wildcard $(CSS_SRC_BASE)/include/*.css) $(BUILD_CSS_SCRIPT) $(wildcard ./public/html/*.html) $(wildcard ./public/js/*.js) $(RIOT_SRC)
+CSS_SRC := $(CSS_SRC_BASE)/style.css $(wildcard $(CSS_SRC_BASE)/include/*.css) $(BUILD_CSS_SCRIPT) $(wildcard ./public/html/*.html) $(wildcard ./public/js/*.js) $(RIOT_SRC)
 BUILD_CSS = $(NODE) $(BUILD_CSS_SCRIPT) $< $@
 
 # JSのバンドル用パラメータ

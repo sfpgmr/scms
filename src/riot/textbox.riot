@@ -1,0 +1,19 @@
+<sf_textbox>
+  <div class="field">
+    <label for={props.for} class="lebel {props.labelClass}" if={props.label}>{props.label}</label>
+    <div class="control">
+      <input class="input {props.class}" type=${props.type || "text"} placeholder={props.placeholder} id={props.id} name={props.name} />
+    </div>
+    <p class="help {props.helpClass}" if={props.help}>{props.help}</p>
+  </div>
+  <style>
+    
+  </style>
+  <script>
+    export default {
+      onMounted(props) {
+        console.log(props);
+      }
+    }
+  </script>
+</sf_textbox>

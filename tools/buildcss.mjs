@@ -11,6 +11,7 @@ import cssVariables from 'postcss-css-variables';
 import cssnano from 'cssnano';
 import fs from 'fs-extra';
 import purgecss from '@fullhuman/postcss-purgecss';
+//import tailwindcss from 'tailwindcss';
 
 process.chdir(path.resolve(path.dirname(new URL(import.meta.url).pathname),'../'));
 
@@ -23,13 +24,16 @@ async function buildcss(){
  
   const processedCss = await
   postcss([
+//    tailwindcss,
     autoprefixer,
     atImport,
     mixin,
     nested,
-    cssVariables,
-    simpleVars,
-    postcssPresetEnv({stage:0, preserve: false}),
+//    cssVariables,
+//    simpleVars,
+    postcssPresetEnv({stage:0, preserve: false,features:{
+      'custom-properties': false
+    }}),
     purgecss({content: ['./public/js/*.js', './public/html/*.html','./src/ejs/*.ejs','./src/riot/*.riot']}),
     cssnano
   ]).process(css,{

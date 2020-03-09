@@ -1,0 +1,27 @@
+<sf_login>
+  <header class="card-header has-background-black ">
+    <p class="card-header-title has-text-white-bis">
+      Login
+    </p>
+  </header>
+  <div class="login">
+    <sf_textbox label="user name" name ="user_name" id="user_name" help="ユーザーIDを入力してください。" />
+    <sf_textbox label="password" name ="user_name" id="user_name" type="password" help="パスワードを入力してください。" />
+    <a href="/#login" class="button is-primary">Login</a>
+  </div>
+<style>
+  :host {
+    display:block;
+  }
+
+  :host > header {
+    background:gray;
+    color:white;
+  }
+
+  :host .login {
+    max-width:300px;
+    margin:auto;
+  }
+</style>
+</sf_login>
