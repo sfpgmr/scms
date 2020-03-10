@@ -1,23 +1,11 @@
 
 sf_navbar {
+  width:100%;
   display: block;
-  position: fixed;
-  background-color:var(--top-nav-bg-color);
-  color:var(--top-nav-color);
   nav {
     background-color:inherit;
     color:inherit;
-    padding-left:4px;
-    padding-right:4px;
-    display: grid;
     div {
-      &.hamburger-menu {
-        border:1px solid black;
-        .icon {
-          font-size:32px;
-          border-radius:2px;
-        }
-      } 
       text-align:center;
       height: var(--top-nav-height);
       line-height: var(--top-nav-height);
@@ -47,25 +35,78 @@ sf_navbar {
 
 @media screen and (max-width:960px) {
   sf_navbar {
-    width:200px;
-    height:100%;
     nav {
-    grid-template-columns: 200px;
-    grid-template-rows:var(--top-nav-height);
+      position:relative;
+      background-color:var(--top-nav-bg-color);
+      color:var(--top-nav-color);
+ 
+      .menu {
+        display:block;
+        background:inherit;
+        width:100%;
+        text-align:left;
+        position:fixed;
+        grid-template-columns: calc(var(--top-nav-height) * 2 );
+      }
+
+      .h-menu {
+        display:inline-block;
+        width:32px;
+        height:32px;
+        font-size:32px;
+      }
+
+      .menu-child:target {
+        position:absolute;
+        background-color:inherit;
+        color:inherit;
+        display:grid;
+        left:0;
+        top:0;
+        width:200px;
+        height:100vh;
+        overflow:auto;
+        grid-template-columns: 200px;
+        grid-template-rows:repeat(auto-fill,var(--top-nav-height));
+      }
+
+      .menu-child {
+       display:none;
+      }
+      .close {
+        padding:4px;
+        text-align:left;
+        a {
+          display:inline-block;
+          text-align:center;
+          vertical-align:middle;
+          line-height:40px;
+          font-size:31px;
+          width:32px;
+          height:32px;
+        }
+      }
     }
   } 
 }
 
 @media screen and (min-width:961px) {
   sf_navbar { 
-    width:100%;
     nav {
-      grid-template-columns: 40px repeat(auto-fill, 100px);
+      position: fixed;
+      width:100%;
+      display:grid;
+      grid-template-columns: var(--top-nav-height) 1fr;
       height: var(--top-nav-height);
-      div {
-        &.hamburger-menu {
-          display:none;
-        }
+      background-color:var(--top-nav-bg-color);
+      color:var(--top-nav-color);
+
+      div.menu-child {
+        display:grid;
+        grid-template-columns: repeat(auto-fill,100px);
+      }
+      a.h-menu,.close {
+        display:none;
       }
     }
   }

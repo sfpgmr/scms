@@ -2773,7 +2773,7 @@
 
     'template': function(template, expressionTypes, bindingTypes, getComponent) {
       return template(
-        '<nav><div class="hamburger-menu"><span class="icon">≡</span></div><div><img src="/images/sfweb.svg" width="32px" height="32px"/></div><div><a href="/">S.F. Web</a></div><div><a href="/">Home</a></div><div><a href="/#signup">Sign up</a></div><div><a href="/#login">Login</a></div><div><a href="/#about">About</a></div></nav>',
+        '<nav><div class="menu"><a class="h-menu" href="#menu-child">≡</a><img src="/images/sfweb.svg" width="32px" height="32px"/></div><div id="menu-child" class="menu-child"><div class="close"><a href="#">✖</a></div><div><a href="/#signup">Sign up</a></div><div><a href="/#login">Login</a></div><div><a href="/#about">About</a></div></div></nav>',
         []
       );
     },
@@ -2792,7 +2792,7 @@
 
     'template': function(template, expressionTypes, bindingTypes, getComponent) {
       return template(
-        '<div class="field"><label expr13="expr13"></label><div class="control"><input expr14="expr14"/></div><p expr15="expr15"></p></div>',
+        '<div class="field"><label expr15="expr15"></label><div class="control"><input expr16="expr16"/></div><p expr17="expr17"></p></div>',
         [{
           'type': bindingTypes.IF,
 
@@ -2800,8 +2800,8 @@
             return scope.props.label;
           },
 
-          'redundantAttribute': 'expr13',
-          'selector': '[expr13]',
+          'redundantAttribute': 'expr15',
+          'selector': '[expr15]',
 
           'template': template(' ', [{
             'expressions': [{
@@ -2828,8 +2828,8 @@
             }]
           }])
         }, {
-          'redundantAttribute': 'expr14',
-          'selector': '[expr14]',
+          'redundantAttribute': 'expr16',
+          'selector': '[expr16]',
 
           'expressions': [{
             'type': expressionTypes.ATTRIBUTE,
@@ -2874,8 +2874,8 @@
             return scope.props.help;
           },
 
-          'redundantAttribute': 'expr15',
-          'selector': '[expr15]',
+          'redundantAttribute': 'expr17',
+          'selector': '[expr17]',
 
           'template': template(' ', [{
             'expressions': [{
@@ -2907,7 +2907,7 @@
 
     'template': function(template, expressionTypes, bindingTypes, getComponent) {
       return template(
-        '<header class="card-header has-background-black "><p class="card-header-title has-text-white-bis">\n      Login\n    </p></header><div class="login"><sf_textbox expr16="expr16" label="user name" name="user_name" id="user_name" help="ユーザーIDを入力してください。"></sf_textbox><sf_textbox expr17="expr17" label="password" name="user_name" id="user_name" type="password" help="パスワードを入力してください。"></sf_textbox><a href="/#login" class="button is-primary">Login</a></div>',
+        '<header class="card-header has-background-black "><p class="card-header-title has-text-white-bis">\n      Login\n    </p></header><div class="login"><sf_textbox expr13="expr13" label="user name" name="user_name" id="user_name" help="ユーザーIDを入力してください。"></sf_textbox><sf_textbox expr14="expr14" label="password" name="user_name" id="user_name" type="password" help="パスワードを入力してください。"></sf_textbox><a href="/#login" class="button is-primary">Login</a></div>',
         [{
           'type': bindingTypes.TAG,
           'getComponent': getComponent,
@@ -2918,8 +2918,8 @@
 
           'slots': [],
           'attributes': [],
-          'redundantAttribute': 'expr16',
-          'selector': '[expr16]'
+          'redundantAttribute': 'expr13',
+          'selector': '[expr13]'
         }, {
           'type': bindingTypes.TAG,
           'getComponent': getComponent,
@@ -2930,8 +2930,8 @@
 
           'slots': [],
           'attributes': [],
-          'redundantAttribute': 'expr17',
-          'selector': '[expr17]'
+          'redundantAttribute': 'expr14',
+          'selector': '[expr14]'
         }]
       );
     },
