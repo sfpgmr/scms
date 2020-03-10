@@ -5,6 +5,7 @@ sf_navbar {
   nav {
     background-color:inherit;
     color:inherit;
+    opacity:0.5;
     div {
       text-align:center;
       height: var(--top-nav-height);
@@ -12,6 +13,7 @@ sf_navbar {
       img {
         display:inline-block;
         vertical-align:middle;
+        background:white;
         line-height: var(--top-nav-height);
       }
       a {
@@ -51,9 +53,7 @@ sf_navbar {
 
       .h-menu {
         display:inline-block;
-        width:32px;
-        height:32px;
-        font-size:32px;
+        font-size:36px;
       }
 
       .menu-child:target {
@@ -81,9 +81,7 @@ sf_navbar {
           text-align:center;
           vertical-align:middle;
           line-height:40px;
-          font-size:31px;
-          width:32px;
-          height:32px;
+          font-size:32px;
         }
       }
     }
