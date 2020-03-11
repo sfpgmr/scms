@@ -2,6 +2,21 @@
 sf_navbar {
   width:100%;
   display: block;
+  a {
+    vertical-align:middle;
+    display:inline-block;
+    color:var(--top-nav-color);
+    &:visited {
+      color:var(--top-nav-color);
+    }
+    &:active {
+      color:var(--top-nav-color);
+    }
+    &:hover {
+      color:red;
+    }
+  }
+
   nav {
     background-color:inherit;
     color:inherit;
@@ -16,21 +31,6 @@ sf_navbar {
         background:white;
         line-height: var(--top-nav-height);
       }
-      a {
-        vertical-align:middle;
-        display:inline-block;
-        color:var(--top-nav-color);
-      }
-      a:visited {
-        color:var(--top-nav-color);
-      }
-      a:active {
-        color:var(--top-nav-color);
-      }
-      a:hover {
-        color:red;
-      }
-
     }
   }
 }
@@ -56,23 +56,32 @@ sf_navbar {
         font-size:36px;
       }
 
-      .menu-child:target {
+      .menu-child {
         position:absolute;
         background-color:inherit;
         color:inherit;
-        display:grid;
-        left:0;
+        left:-200px;
         top:0;
         width:200px;
         height:100vh;
         overflow:auto;
         grid-template-columns: 200px;
         grid-template-rows:repeat(auto-fill,var(--top-nav-height));
+        display:grid;
       }
 
-      .menu-child {
-       display:none;
+      .menu-child:target {
+        transition-property:transform;
+        transform:translateX(200px);
       }
+
+      .menu-child:not(target) {
+        transition:transform 0.5s;
+        transform:translateX(0);
+      }
+
+
+
       .close {
         padding:4px;
         text-align:left;

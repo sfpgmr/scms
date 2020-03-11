@@ -2773,7 +2773,7 @@
 
     'template': function(template, expressionTypes, bindingTypes, getComponent) {
       return template(
-        '<nav><div class="menu"><a class="h-menu" href="#menu-child">≡</a><img src="/images/sfweb.svg" width="32px" height="32px"/></div><div id="menu-child" class="menu-child"><div class="close"><a href="#">✖</a></div><div><a href="/#signup">Sign up</a></div><div><a href="/#login">Login</a></div><div><a href="/#about">About</a></div><div><a href="https://www.sfpgmr.net/blog/">Blog</a></div></div></nav>',
+        '<nav id="top-menu" class="top-menu"><div class="menu"><a class="h-menu" href="#menu-child">≡</a><img src="/images/sfweb.svg" width="32px" height="32px"/></div><div id="menu-child" class="menu-child"><div class="close"><a href="#top-menu">✖</a></div><div><a href="/#signup">Sign up</a></div><div><a href="/#login">Login</a></div><div><a href="/#about">About</a></div><div><a href="https://www.sfpgmr.net/blog/">Blog</a></div></div></nav>',
         []
       );
     },
