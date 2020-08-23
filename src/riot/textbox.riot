@@ -2,7 +2,7 @@
   <div class="field">
     <label for={props.for} class="lebel {props.labelClass}" if={props.label}>{props.label}</label>
     <div class="control">
-      <input class="input {props.class}" type=${props.type || "text"} placeholder={props.placeholder} id={props.id} name={props.name} />
+      <input class="input {props.class}" type={props.input_type || 'text'} placeholder={props.placeholder} id={props.input_id} name={props.input_name} />
     </div>
     <p class="help {props.helpClass}" if={props.help}>{props.help}</p>
   </div>

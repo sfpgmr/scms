@@ -5,9 +5,11 @@
     </p>
   </header>
   <div class="login">
-    <sf_textbox label="user name" name ="user_name" id="user_name" help="ユーザーIDを入力してください。" />
-    <sf_textbox label="password" name ="user_name" id="user_name" type="password" help="パスワードを入力してください。" />
-    <a href="/#login" class="button is-primary">Login</a>
+    <form action="/login" method="post">
+      <sf_textbox label="username" input_name ="username" input_id="username" help="ユーザーIDを入力してください。" />
+      <sf_textbox label="password" input_name ="password" input_id="password" input_type="password" help="パスワードを入力してください。" />
+      <input type="submit"></a>
+    </form>
   </div>
 <style>
   :host {

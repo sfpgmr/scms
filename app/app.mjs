@@ -7,22 +7,23 @@ import serve from 'koa-static';
 import mount from 'koa-mount';
 import CmsConsole from '../routes/cms-console.mjs';
 import resolveHome from './resolveHome.mjs';
+
 const app = new Koa();
 const router = new Router();
-const cms = new CmsConsole();
 
 const serveOpts = {extensions:['html','htm']};
-
 app.use(helmet());
 app.use(logger('combined'));
 
+const cms = new CmsConsole(app);
 
 app.use(mount('/js/',serve(resolveHome('./public/js/'),serveOpts)));
 app.use(mount('/css/',serve(resolveHome('./public/css/'),serveOpts)));
 app.use(mount('/images/',serve(resolveHome('./public/images/'),serveOpts)));
 app.use(mount('/',serve(resolveHome('./public/html/'),serveOpts)));
-cms.mount(router);
-app.use(router.routes());
+
+app.use(cms.router.routes());
+app.use(cms.router.allowedMethods());
 
 
 export default app;

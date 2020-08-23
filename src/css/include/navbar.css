@@ -68,19 +68,14 @@ sf_navbar {
         grid-template-columns: 200px;
         grid-template-rows:repeat(auto-fill,var(--top-nav-height));
         display:grid;
+        transition:transform 0.5s;
+        transform:translateX(0);
       }
 
       .menu-child:target {
         transition-property:transform;
         transform:translateX(200px);
       }
-
-      .menu-child:not(target) {
-        transition:transform 0.5s;
-        transform:translateX(0);
-      }
-
-
 
       .close {
         padding:4px;

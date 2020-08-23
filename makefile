@@ -22,7 +22,6 @@ EJS_SRC := ./src/ejs/index.ejs $(wildcard ./src/ejs/*.ejs)
 #BUILD_EJS = ejs-cli --base-dir src/ejs/ 'index.ejs' --out ./public/html/
 BUILD_EJS = $(NODE) ./tools/buildEjs.mjs $< $@
 
-
 .PHONY:all
 all:$(JS) $(EJS) $(CSS)
 

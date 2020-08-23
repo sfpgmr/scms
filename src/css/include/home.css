@@ -1,0 +1,8 @@
+sf_home {
+  display:block;
+  padding:8px;
+  p {
+    font-size:1.5rem;
+    line-height:1.75rem;
+  }
+}

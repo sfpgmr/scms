@@ -1,5 +1,5 @@
 :root {
-  font-family: var(--gothic-fonts);
+  font-family: '851tegakizatsu',var(--gothic-fonts);
   font-size: var(--default-font-size);
   line-height:var(--default-line-height);
 }

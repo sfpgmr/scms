@@ -24,13 +24,10 @@ async function buildcss(){
  
   const processedCss = await
   postcss([
-//    tailwindcss,
     autoprefixer,
     atImport,
     mixin,
     nested,
-//    cssVariables,
-//    simpleVars,
     postcssPresetEnv({stage:0, preserve: false,features:{
       'custom-properties': false
     }}),

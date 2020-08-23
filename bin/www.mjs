@@ -8,12 +8,7 @@ import http from 'http';
 import fs from 'fs';
 import resolveHome from '../app/resolveHome.mjs';
 
-//const app = new Koa();
-// app.use(ctx => {
-//   ctx.body = 'Hello Koa';
-// });
 const keys = JSON.parse(fs.readFileSync(resolveHome('./keys/webserver/keys.json')));
-
 
 /**
  * Get port from environment and store in Express.

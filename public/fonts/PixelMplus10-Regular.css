@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "PixelMplus10";
+    src: url("/fonts/PixelMplus10-Regular.eot"); /* IE9 */
+    src: url("/fonts/PixelMplus10-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("/fonts/PixelMplus10-Regular.woff") format("woff"), /* chrome, firefox */
+    url("/fonts/PixelMplus10-Regular.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("/fonts/PixelMplus10-Regular.svg#PixelMplus10") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
